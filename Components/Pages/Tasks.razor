@@ -1,0 +1,22 @@
+﻿@page "/tasks"
+@rendermode InteractiveServer
+
+<PageTitle>Tasks</PageTitle>
+
+<h1>Hello</h1>
+
+<p role="status">Unfullfilled tasks: @unfTasks</p>
+<input type="checkbox" name="taskCompleted">
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int unfTasks = 0;
+
+    private void IncrementCount()
+    {
+        unfTasks++;
+    }
+    private void TaskChanged(){
+
+    }
+}
